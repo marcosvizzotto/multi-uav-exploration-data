@@ -1,34 +1,13 @@
 # Cooperative Multi-UAV Exploration with IPPO — Training and Evaluation Data
 
-This repository contains the training logs, trained policy checkpoints, configuration files and evaluation results behind the experiments reported in:
+This repository contains the training logs, trained policy checkpoints and evaluation results behind the experiments reported in:
 
-- **PhD thesis:** M. R. Vizzotto, *Deep Reinforcement Learning Based Exploration Algorithm with Distributed Architecture for Multiple Unmanned Aerial Vehicles*, PhD thesis, Graduate Program in Electrical Engineering (PPGEE), Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil, 2026.
-- **Exploration article:** M. R. Vizzotto, E. P. de Freitas, J. Barata and C. E. Pereira, *Deep Reinforcement Learning Based Exploration Algorithm with Distributed Architecture for Multiple Unmanned Aerial Vehicles*, submitted to the *Journal of Field Robotics*. Folders `01` to `07`.
-- **Case-study article (cattle detection and counting):** C. Figueiredo et al., *[title]*, *[venue, year]*. Folders `08` and `09`.
-
-The source code is not part of this repository; it is available from the corresponding author upon reasonable request.
+- **PhD thesis:** *[thesis title]*, Marcos R. Vizzotto, *[university]*, *[year]*.
+- **Article:** *[article title]*, *[authors]*, *[venue, year]*.
 
 The work studies cooperative exploration of unknown environments by a team of UAVs. Each UAV runs the same policy, trained with Independent Proximal Policy Optimization (IPPO, one network shared by all UAVs), on top of a set of classical modules: an occupancy-grid map, frontier detection and clustering, a cooperative target assignment, A* path planning and an artificial potential field with a hard safety projection. A case study applies the trained exploration policy to cattle counting on a simulated farm, with an onboard camera and a YOLO detector.
 
 Only the runs whose numbers appear in the thesis or the article are included.
-
-## Configurations
-
-The configuration numbers used in the folder names and in the article are:
-
-| Config | Target selection and safety |
-|---|---|
-| 0 | **Nearest-frontier baseline, no cooperation:** targets chosen only by frontier distance, size and unknown-mass bonus; no ownership, proximity-imbalance or reservation penalties, no sequential reservation, no team-overlap reward, learned direction preference off |
-| 1 | Ablation baseline: Config 0 plus ownership, proximity-imbalance and reservation penalties, sequential reservation, team-overlap reward and learned direction preference |
-| 2 | + teammate-avoidance term |
-| 3 | + release from a stalled target |
-| 4 | + wider unknown-mass bonus (neighborhood from 8 to 20 cells) |
-| 5 | + mother-frontier penalty (weight 2) |
-| 6 | mother-frontier penalty raised to 20 |
-| 7 | + path-cost target ranking (all cooperative target-selection mechanisms) |
-| Final | **Proposed:** Config 7 + hard UAV-UAV safety projection + diversity probe |
-
-Each configuration from 2 to 7 adds one change to the previous one. All configurations share the occupancy map, the frontier module, A* planning and the obstacle safety layer.
 
 ## Contents
 
@@ -38,11 +17,11 @@ Each configuration from 2 to 7 adds one change to the previous one. All configur
 | `02_final_config_three_seeds/` | Final configuration, seeds 42, 7 and 123, on the primary, cubes and office maps (9 runs) | Seed-robustness and generalization tables; training-curve figures; path-efficiency and safety-filter results |
 | `03_without_uav_uav_hard_projection/` | Config 7 without the hard UAV-UAV safety projection, seeds 42, 7 and 123 | UAV-UAV collision table ("without the projection" row) |
 | `04_scalability_primary_seed42/` | Final configuration with 3 and 4 UAVs (the 2-UAV run is `02_final_config_three_seeds/primary_seed42`) | Scalability table and figure |
-| `05_config0_vs_config7_overlap_exhaustion/` | Config 0 (nearest-frontier baseline) and Config 7, seeds 42 and 7, frontier-exhaustion termination, with per-episode logs | Team-territory overlap comparison |
-| `06_nearest_frontier_baseline_ablation_protocol/` | Config 0, seeds 42 and 7, and Config 7, seed 7, under the ablation-chain protocol, with per-episode logs (Config 1 and Config 7 seed 42 are in `01_…`) | Nearest-frontier baseline comparison |
+| `05_config0_vs_config7_overlap_exhaustion/` | Config 0 (no cooperation) and Config 7, seeds 42 and 7, frontier-exhaustion termination, with per-episode logs | Team-territory overlap comparison |
+| `06_floor_ceiling_ablation_protocol/` | Config 0, seeds 42 and 7, and Config 7, seed 7, under the ablation-chain protocol, with per-episode logs (Config 1 and Config 7 seed 42 are in `01_…`) | Floor-to-ceiling comparison |
 | `07_sequential_transfer_seed42/` | One policy fine-tuned in sequence: primary → cubes → office, plus the inference-only evaluation on the held-out validation map | Sequential-transfer table |
-| `08_case_study_farm/` | Policy trained on the 25×25 m farm, and the cattle-counting results at 25×25, 50×50 and 100×100 m (26 missions each) | Thesis case-study chapter; case-study article |
-| `09_article_detection_experiments_50x50/` | Detection experiments at 50×50 m (26 missions each): arena-trained policy, YOLO confidence 0.50/0.90, fusion radius 0.5/4.0 m | Case-study article |
+| `08_case_study_farm/` | Policy trained on the 25×25 m farm, and the cattle-counting results at 25×25, 50×50 and 100×100 m (26 missions each) | Case-study chapter |
+| `09_article_detection_experiments_50x50/` | Detection experiments at 50×50 m (26 missions each): arena-trained policy, YOLO confidence 0.50/0.90, fusion radius 0.5/4.0 m | Article |
 
 ### Contents of each run folder
 
@@ -150,6 +129,4 @@ The data in this repository is released under the [Creative Commons Attribution 
 
 ## How to cite
 
-If you use this data, please cite the thesis and the corresponding article listed at the top of this page.
-
-Repository: https://github.com/marcosvizzotto/multi-uav-exploration-data
+If you use this data, please cite the thesis and the article listed at the top of this page.
