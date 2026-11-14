@@ -4,7 +4,7 @@ This repository contains the training logs, trained policy checkpoints, configur
 
 - **PhD thesis:** M. R. Vizzotto, *Deep Reinforcement Learning Based Exploration Algorithm with Distributed Architecture for Multiple Unmanned Aerial Vehicles*, PhD thesis, Graduate Program in Electrical Engineering (PPGEE), Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil, 2026.
 - **Exploration article:** M. R. Vizzotto, E. P. de Freitas, J. Barata and C. E. Pereira, *Deep Reinforcement Learning Based Exploration Algorithm with Distributed Architecture for Multiple Unmanned Aerial Vehicles*, submitted to the *Journal of Field Robotics*. Folders `01` to `07`.
-- **Case-study article (cattle detection and counting):** C. Figueiredo et al., *[title]*, *[venue, year]*. Folders `08` and `09`.
+- **Case-study article (cattle detection and counting):** C. Figueiredo et al., *Herd Counting from Cooperative Multi-UAV Exploration: A Loss Analysis in Simulation*, *[venue, year]*. Folders `08` and `09`.
 
 The source code is not part of this repository; it is available from the corresponding author upon reasonable request.
 
