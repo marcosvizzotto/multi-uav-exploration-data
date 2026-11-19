@@ -6,6 +6,8 @@ This repository contains the training logs, trained policy checkpoints, configur
 - **Exploration article:** M. R. Vizzotto, E. P. de Freitas, J. Barata and C. E. Pereira, *Deep Reinforcement Learning Based Exploration Algorithm with Distributed Architecture for Multiple Unmanned Aerial Vehicles*, submitted to the *Journal of Field Robotics*. Folders `01` to `07` and `10`.
 - **Case-study article (cattle detection and counting):** C. Figueiredo et al., *Herd Counting from Cooperative Multi-UAV Exploration: A Loss Analysis in Simulation*, *[venue, year]*. Folders `08` and `09`.
 
+The source code is not part of this repository; it is available from the corresponding author upon reasonable request.
+
 The work studies cooperative exploration of unknown environments by a team of UAVs. Each UAV runs its own policy, trained with Independent Proximal Policy Optimization (IPPO: each UAV has its own actor-critic network, with policy and value heads on a shared trunk; the UAVs do not share parameters with each other), on top of a set of classical modules: an occupancy-grid map, frontier detection and clustering, a cooperative target assignment, A* path planning and an artificial potential field with a hard safety projection. A case study applies the trained exploration policy to cattle counting on a simulated farm, with an onboard camera and a YOLO detector.
 
 Only the runs whose numbers appear in the thesis or the article are included.
