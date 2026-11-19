@@ -1,0 +1,11 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,checkpoint
+0,4482,4482,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+1,8994,4512,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+2,13538,4544,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+3,17486,3948,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+4,21798,4312,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+5,26245,4447,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+6,30412,4167,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+7,34217,3805,coverage,0,0,0,0.8501996994018555,0.8501996994018555,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+8,37893,3676,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+9,42652,4759,coverage,0,0,0,0.8501996994018555,0.8501996994018555,42,2,0.0,0.0,0.3,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt

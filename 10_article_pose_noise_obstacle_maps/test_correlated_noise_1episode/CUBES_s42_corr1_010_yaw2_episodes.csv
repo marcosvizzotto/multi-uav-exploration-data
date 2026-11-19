@@ -1,0 +1,2 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,pose_tau_s,pose_order,checkpoint
+0,4637,4637,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.1,2.0,0.0,2.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt

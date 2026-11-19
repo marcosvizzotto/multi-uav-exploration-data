@@ -1,0 +1,11 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,checkpoint
+0,4588,4588,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+1,9170,4582,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+2,13593,4423,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+3,18292,4699,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+4,23034,4742,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+5,26502,3468,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+6,30252,3750,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+7,34046,3794,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+8,38595,4549,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+9,43521,4926,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt

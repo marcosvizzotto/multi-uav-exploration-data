@@ -1,0 +1,11 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,checkpoint
+0,7200,7200,timeout,0,0,0,0.4771735668182373,0.4771735668182373,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+1,14400,7200,timeout,0,0,0,0.5560675859451294,0.5560675859451294,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+2,21600,7200,timeout,0,0,0,0.4916743338108063,0.4917357861995697,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+3,28800,7200,timeout,0,0,0,0.552933931350708,0.552933931350708,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+4,36000,7200,timeout,0,0,0,0.5577265620231628,0.5577265620231628,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+5,43200,7200,timeout,0,0,0,0.4964669644832611,0.4964669644832611,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+6,50400,7200,timeout,0,0,0,0.3429800271987915,0.3429800271987915,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+7,57600,7200,timeout,0,0,0,0.6194162964820862,0.6194777488708496,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+8,64800,7200,timeout,0,0,0,0.5685406923294067,0.5685406923294067,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt
+9,72000,7200,timeout,0,0,0,0.5464208722114563,0.5464208722114563,42,2,0.1,2.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-30_01-00-35_ippo_torch_baseline/checkpoints/agent_1000000.pt

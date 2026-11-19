@@ -1,0 +1,11 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,checkpoint
+0,5400,5400,timeout,0,0,0,0.5215975642204285,0.5215975642204285,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+1,10800,5400,timeout,0,0,0,0.4420890808105469,0.4420890808105469,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+2,16200,5400,timeout,0,0,0,0.7859293222427368,0.7859293222427368,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+3,21600,5400,timeout,0,0,0,0.7325959801673889,0.7325959801673889,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+4,27000,5400,timeout,0,0,0,0.7097388505935669,0.7097388505935669,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+5,32400,5400,timeout,0,0,0,0.832749605178833,0.8328110575675964,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+6,37800,5400,timeout,0,0,0,0.7363440990447998,0.7363440990447998,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+7,43200,5400,timeout,0,0,0,0.5263287425041199,0.5263287425041199,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+8,48600,5400,timeout,0,0,0,0.6771735548973083,0.6773579120635986,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+9,54000,5400,timeout,0,0,0,0.5486943125724792,0.549062967300415,42,2,0.05,1.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt

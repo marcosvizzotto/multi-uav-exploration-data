@@ -1,0 +1,11 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,checkpoint
+0,5400,5400,timeout,0,0,0,0.7407680749893188,0.7407680749893188,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+1,10800,5400,timeout,0,0,0,0.698924720287323,0.698924720287323,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+2,15828,5028,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+3,21228,5400,timeout,0,0,0,0.811489999294281,0.8117972612380981,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+4,26628,5400,timeout,0,0,0,0.6817818880081177,0.6819047331809998,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+5,32028,5400,timeout,0,0,0,0.27496159076690674,0.27496159076690674,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+6,36867,4839,coverage,0,0,0,0.8505069017410278,0.8505069017410278,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+7,42267,5400,timeout,0,0,0,0.4334869384765625,0.4334869384765625,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+8,47667,5400,timeout,0,0,0,0.7837787866592407,0.7837787866592407,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+9,53067,5400,timeout,0,0,0,0.7105376124382019,0.7105376124382019,42,2,0.1,0.0,0.0,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
