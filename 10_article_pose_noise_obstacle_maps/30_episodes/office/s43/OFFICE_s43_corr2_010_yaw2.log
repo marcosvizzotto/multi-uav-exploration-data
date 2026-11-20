@@ -1,0 +1,211 @@
+[Warning] [simulation_app.simulation_app] Modules: ['omni.kit_app'] were loaded before SimulationApp was started and might not be loaded correctly.
+[Warning] [simulation_app.simulation_app] Please check to make sure no extra omniverse or pxr modules are imported before the call to SimulationApp(...)
+Loading user config located at: '<isaaclab_venv>/lib/python3.10/site-packages/omni/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: <isaaclab_venv>/lib/python3.10/site-packages/omni/logs/Kit/Isaac-Sim/4.5/kit_20261119_192843.log
+2026-11-19 22:28:43 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-11-19 22:28:43 [1ms] [Warning] [omni.ext.plugin] [ext: isaacsim_4_5] Extensions config 'extension.toml' doesn't exist '<isaaclab>/IsaacLab/apps/isaacsim_4_5' or '<isaaclab>/IsaacLab/apps/isaacsim_4_5/config'
+2026-11-19 22:28:43 [1ms] [Warning] [omni.ext.plugin] [ext: source] Extensions config 'extension.toml' doesn't exist '<isaaclab>/IsaacLab/apps/source' or '<isaaclab>/IsaacLab/apps/source/config'
+2026-11-19 22:28:43 [1ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '<isaaclab>/IsaacLab/apps/rendering_modes' or '<isaaclab>/IsaacLab/apps/rendering_modes/config'
+2026-11-19 22:28:43 [93ms] [Warning] [omni.datastore] OmniHub is inaccessible
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.178.04    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3060          | Yes: 0 |     | 12534   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2504      | 323f69ed.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-138-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: 12th Gen Intel(R) Core(TM) i9-12900KF
+| Bare Metal Cores: 16 | Bare Metal Logical Cores: 32
+| Available Cores:  24 
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 64136 | Free Memory: 53450
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2047
+|---------------------------------------------------------------------------------------------|
+2026-11-19 22:28:47 [4,654ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-11-19 22:28:50 [7,074ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-11-19 22:28:50 [7,302ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-11-19 22:28:50 [7,363ms] [Warning] [omni.kit.tool.measure.interface._widgets] Vertex, Edge and Mid Point snap requires `/rtx-transient/scenedb/useUniformsReindexing` setting to be true
+2026-11-19 22:28:54 [11,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/ambientOcclusion/enabled'
+2026-11-19 22:28:54 [11,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/enabled'
+2026-11-19 22:28:54 [11,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/indirectDiffuse/enabled'
+2026-11-19 22:28:54 [11,293ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/raytracing/cached/enabled'
+2026-11-19 22:28:54 [11,294ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/reflections/enabled'
+2026-11-19 22:28:54 [11,294ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/sceneDb/ambientLightIntensity'
+2026-11-19 22:28:54 [11,294ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/translucency/enabled'
+2026-11-19 22:28:54 [11,294ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/viewTile/limit'
+2026-11-19 22:28:54 [11,807ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit buffer size 2908577024
+2026-11-19 22:28:54 [11,807ms] [Warning] [rtx.scenedb.plugin] SceneDbContext : TLAS limit : valid true, within: false
+[38;20m[skrl:INFO] Environment wrapper: Isaac Lab (multi-agent)[0m
+[38;20m[skrl:INFO] Seed: 43[0m
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: <isaaclab>/IsaacLab/apps/isaaclab.python.headless.rendering.kit
+[INFO]: Parsing configuration from: exploration_multi_uavs.tasks.direct.exploration_multi_uavs_marl-v3.drl_multiuavs_marl_env_cfg:DRLMultiuavsMarlEnvCfg
+[INFO]: Parsing configuration from: eval_worktrees/office_6c759e5/source/exploration_multi_uavs/exploration_multi_uavs/tasks/direct/exploration_multi_uavs_marl-v3/agents/skrl_ippo_cfg.yaml
+Setting seed: 43
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 43
+	Physics step-size     : 0.008333333333333333
+	Rendering step-size   : 0.016666666666666666
+	Environment step-size : 0.016666666666666666
+[INFO]: Time taken for scene creation : 0.985360 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 32.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 3.207745 seconds
+[INFO]: Completed setting up the environment...
+==================================================
+Shared model (roles): ['policy', 'value']
+==================================================
+
+class SharedModel(GaussianMixin,DeterministicMixin, Model):
+    def __init__(self, observation_space, action_space, device):
+        Model.__init__(self, observation_space, action_space, device)
+        GaussianMixin.__init__(
+            self,
+            clip_actions=True,
+            clip_log_std=True,
+            min_log_std=-20.0,
+            max_log_std=0.5,
+            reduction="sum",
+            role="policy",
+        )
+        DeterministicMixin.__init__(self, clip_actions=False, role="value")
+
+        self.net_container = nn.Sequential(
+            nn.LazyLinear(out_features=128),
+            nn.ELU(),
+            nn.LazyLinear(out_features=128),
+            nn.ELU(),
+        )
+        self.policy_layer = nn.LazyLinear(out_features=self.num_actions)
+        self.log_std_parameter = nn.Parameter(torch.full(size=(self.num_actions,), fill_value=-0.7), requires_grad=True)
+        self.value_layer = nn.LazyLinear(out_features=1)
+
+    def act(self, inputs, role):
+        if role == "policy":
+            return GaussianMixin.act(self, inputs, role)
+        elif role == "value":
+            return DeterministicMixin.act(self, inputs, role)
+    
+    def compute(self, inputs, role=""):
+        if role == "policy":
+            states = unflatten_tensorized_space(self.observation_space, inputs.get("states"))
+            taken_actions = unflatten_tensorized_space(self.action_space, inputs.get("taken_actions"))
+            net = self.net_container(states)
+            self._shared_output = net
+            output = self.policy_layer(net)
+            return output, self.log_std_parameter, {}
+        elif role == "value":
+            if self._shared_output is None:
+                states = unflatten_tensorized_space(self.observation_space, inputs.get("states"))
+                taken_actions = unflatten_tensorized_space(self.action_space, inputs.get("taken_actions"))
+                net = self.net_container(states)
+                shared_output = net
+            else:
+                shared_output = self._shared_output
+            self._shared_output = None
+            output = self.value_layer(shared_output)
+            return output, {}
+    
+--------------------------------------------------
+==================================================
+Shared model (roles): ['policy', 'value']
+==================================================
+
+class SharedModel(GaussianMixin,DeterministicMixin, Model):
+    def __init__(self, observation_space, action_space, device):
+        Model.__init__(self, observation_space, action_space, device)
+        GaussianMixin.__init__(
+            self,
+            clip_actions=True,
+            clip_log_std=True,
+            min_log_std=-20.0,
+            max_log_std=0.5,
+            reduction="sum",
+            role="policy",
+        )
+        DeterministicMixin.__init__(self, clip_actions=False, role="value")
+
+        self.net_container = nn.Sequential(
+            nn.LazyLinear(out_features=128),
+            nn.ELU(),
+            nn.LazyLinear(out_features=128),
+            nn.ELU(),
+        )
+        self.policy_layer = nn.LazyLinear(out_features=self.num_actions)
+        self.log_std_parameter = nn.Parameter(torch.full(size=(self.num_actions,), fill_value=-0.7), requires_grad=True)
+        self.value_layer = nn.LazyLinear(out_features=1)
+
+    def act(self, inputs, role):
+        if role == "policy":
+            return GaussianMixin.act(self, inputs, role)
+        elif role == "value":
+            return DeterministicMixin.act(self, inputs, role)
+    
+    def compute(self, inputs, role=""):
+        if role == "policy":
+            states = unflatten_tensorized_space(self.observation_space, inputs.get("states"))
+            taken_actions = unflatten_tensorized_space(self.action_space, inputs.get("taken_actions"))
+            net = self.net_container(states)
+            self._shared_output = net
+            output = self.policy_layer(net)
+            return output, self.log_std_parameter, {}
+        elif role == "value":
+            if self._shared_output is None:
+                states = unflatten_tensorized_space(self.observation_space, inputs.get("states"))
+                taken_actions = unflatten_tensorized_space(self.action_space, inputs.get("taken_actions"))
+                net = self.net_container(states)
+                shared_output = net
+            else:
+                shared_output = self._shared_output
+            self._shared_output = None
+            output = self.value_layer(shared_output)
+            return output, {}
+    
+--------------------------------------------------
+[eval] goal_pref_ramp apos o 1o passo = 1.0
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 1/20 coverage len=6417 cov=0.850 (219s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 2/20 coverage len=5473 cov=0.850 (400s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 3/20 timeout len=7200 cov=0.671 (633s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 4/20 coverage len=4858 cov=0.850 (791s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 5/20 timeout len=7200 cov=0.808 (1130s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 6/20 timeout len=7200 cov=0.707 (1404s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 7/20 coverage len=4885 cov=0.850 (1564s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 8/20 coverage len=5308 cov=0.850 (1763s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 9/20 coverage len=5427 cov=0.850 (1947s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 10/20 timeout len=7200 cov=0.850 (2184s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 11/20 timeout len=7200 cov=0.750 (2460s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 12/20 coverage len=5637 cov=0.850 (2639s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 13/20 timeout len=7200 cov=0.825 (2899s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 14/20 coverage len=6696 cov=0.850 (3214s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 15/20 coverage len=3665 cov=0.850 (3328s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 16/20 coverage len=5765 cov=0.850 (3516s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 17/20 timeout len=7200 cov=0.834 (3865s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 18/20 timeout len=7200 cov=0.677 (4085s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 19/20 coverage len=3761 cov=0.850 (4203s)
+[eval] OFFICE_s43_corr2_010_yaw2 episodio 20/20 coverage len=5753 cov=0.850 (4390s)
+[eval] FIM OFFICE_s43_corr2_010_yaw2: 20 episodios
+2026-11-19 22:28:56 [13,563ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/directLighting/sampledLighting/samplesPerPixel'
+2026-11-19 22:28:56 [13,563ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/pathtracing/maxSamplesPerLaunch'
+2026-11-19 22:28:56 [13,563ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults-transient/meshlights/forceDisable'
+2026-11-19 22:28:56 [13,592ms] [Warning] [omni.usd-abi.plugin] No setting was found for '/rtx-defaults/post/dlss/execMode'
+2026-11-19 22:28:59 [16,487ms] [Warning] [isaaclab.sim.utils] Could not perform 'modify_rigid_body_properties' on any prims under: '/World/envs/env_0/mesh_merged'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+2026-11-19 22:28:59 [16,488ms] [Warning] [isaaclab.sim.utils] Could not perform 'modify_collision_properties' on any prims under: '/World/envs/env_0/mesh_merged'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []

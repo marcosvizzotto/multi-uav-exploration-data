@@ -43,7 +43,7 @@ Each configuration from 2 to 7 adds one change to the previous one. All configur
 | `07_sequential_transfer_seed42/` | One policy fine-tuned in sequence: primary → cubes → office, plus the inference-only evaluation on the held-out validation map | Sequential-transfer table |
 | `08_case_study_farm/` | Policy trained on the 25×25 m farm, and the cattle-counting results at 25×25, 50×50 and 100×100 m (26 missions each) | Thesis case-study chapter; case-study article |
 | `09_article_detection_experiments_50x50/` | Detection experiments at 50×50 m (26 missions each): arena-trained policy, YOLO confidence 0.50/0.90, fusion radius 0.5/4.0 m | Case-study article |
-| `10_article_pose_noise_obstacle_maps/` | Robustness to pose error and LiDAR ray loss on the cubes and office maps: final-configuration policies (seed 42), 10 evaluation episodes per condition, with the final 2D map of every episode | Exploration article (robustness experiment) |
+| `10_article_pose_noise_obstacle_maps/` | Robustness to pose error and LiDAR ray loss on the cubes and office maps: final-configuration policies (seed 42), 30 evaluation episodes per condition (plus a first 10-episode screening with more conditions), with the final 2D map of every episode | Exploration article (robustness experiment) |
 
 ### Contents of each run folder
 
@@ -154,27 +154,38 @@ Evaluation only; no policy is retrained. The policies are the final-configuratio
 | cubes | `02_final_config_three_seeds/cubes_seed42` | 90 s | 0.85 |
 | office | `02_final_config_three_seeds/office_seed42` | 120 s | 0.85 |
 
-Each condition was run for 10 episodes, with evaluation seed 42. The noise is applied only to the **estimated** pose, which is used by the occupancy map, the frontier module and A*, the policy observation and the safety projections. Physics, contact sensors, the fence and the UAV-UAV collision check keep the true pose. The episode ends on the **estimated** coverage, as it would on a real UAV.
+The experiment has two parts:
+
+- **30 episodes per condition (`30_episodes/`)**, the results reported in the article: no noise, 10% and 30% LiDAR ray loss, and correlated pose error of 0.10 m / 2°, on both maps. Each condition combines 10 episodes with evaluation seed 42 and 20 episodes with evaluation seed 43. The seed-42 episodes of `nominal`, `drop30` and `corr2_010_yaw2` are the ones in `<map>/` (first part); `drop10` with seed 42 and all seed-43 episodes are in `30_episodes/<map>/s42/` and `s43/`. No seed-43 episode starts from the same pair of UAV positions as a seed-42 episode.
+- **10 episodes per condition, evaluation seed 42 (`<map>/`)**: the first screening, which also includes the conditions with pose error redrawn at every step (i.i.d.), the position-only and yaw-only conditions and the correlated 0.20 m / 4° condition.
+
+The noise is applied only to the **estimated** pose, which is used by the occupancy map, the frontier module and A*, the policy observation and the safety projections. Physics, contact sensors, the fence and the UAV-UAV collision check keep the true pose. The episode ends on the **estimated** coverage, as it would on a real UAV.
 
 | Condition (folder suffix) | Pose error | LiDAR |
 |---|---|---|
 | `nominal` | none | all rays |
-| `drop30` | none | 30% of the rays dropped at random in every scan |
+| `drop10`, `drop30` | none | 10% / 30% of the rays dropped at random in every scan |
 | `pose005_yaw1`, `pose010_yaw2`, `pose020_yaw4` | position σ = 0.05 / 0.10 / 0.20 m and yaw σ = 1 / 2 / 4°, redrawn independently at every step (i.i.d.) | all rays |
 | `pose010_yaw0` | position only, σ = 0.10 m, i.i.d. | all rays |
 | `pose000_yaw2` | yaw only, σ = 2°, i.i.d. | all rays |
 | `corr2_010_yaw2`, `corr2_020_yaw4` | position σ = 0.10 / 0.20 m and yaw σ = 2 / 4°, correlated in time: second-order Gauss-Markov process with time constant τ = 2 s (a smooth error, without step-to-step jitter, closer to the output of a localization filter) | all rays |
 
-Not every condition was run on both maps; `SUMMARY_<map>.md` lists the ones that were.
+Not every condition was run on both maps; the summary files list the ones that were.
 
-The i.i.d. conditions also corrupt the motion signals the policy observes: the per-step displacement computed from the noisy pose (about 0.14 m of noise against about 0.02 m of true motion per step) makes the stuck detector of the trailing-efficiency term flag the UAVs as stuck for most of the episode. The correlated conditions do not (the stuck counter is 0 at the end of every correlated episode).
+The i.i.d. conditions also corrupt the motion signals the policy observes: the per-step displacement computed from the noisy pose (about 0.14 m of noise against about 0.02 m of true motion per step) makes the stuck detector of the trailing-efficiency term flag the UAVs as stuck for most of the episode. The correlated conditions do not: at the end of the episode, the stuck counter is close to the episode length in every i.i.d. episode, and in the 70 correlated episodes it is 0 except in one (14 steps, one UAV, cubes).
 
 ### Files
 
 ```
 10_article_pose_noise_obstacle_maps/
-  <map>/SUMMARY_<map>.md              table per condition (mean ± population SD over episodes)
-  <map>/PER_EPISODE_<map>.csv         one row per episode, with the map-quality metrics below
+  30_episodes/<map>/SUMMARY_<map>_30ep.md      article results: rates in % with 95% Wilson interval; map metrics as
+                                               mean ± population SD; agreement between the two seeds; start positions
+  30_episodes/<map>/PER_EPISODE_<map>_30ep.csv one row per episode (all 30 of each condition; column src = folder)
+  30_episodes/<map>/s42/, s43/                 same layout as <map>/ below, for the added episodes; npz_<cond>/ also
+                                               holds epNNN_first.npz, the first map export (UAV start positions)
+  30_episodes/queue.log                        start and end time of every evaluation
+  <map>/SUMMARY_<map>.md              first screening, 10 episodes (mean ± population SD over episodes)
+  <map>/PER_EPISODE_<map>.csv         one row per episode of the first screening, with the map-quality metrics below
   <map>/<MAP>_s42_<cond>_episodes.csv evaluator output, one row per episode
   <map>/<MAP>_s42_<cond>_env.yaml     environment configuration used (noise fields: eval_*)
   <map>/<MAP>_s42_<cond>_meta.json    checkpoint, noise settings, source commit, software versions
@@ -186,9 +197,12 @@ The i.i.d. conditions also corrupt the motion signals the policy observes: the p
                                       second order (map exported every 30 steps)
 ```
 
-### Map-quality metrics (`PER_EPISODE_<map>.csv`)
+### Map-quality metrics (`PER_EPISODE_*.csv`)
 
-The estimated coverage overstates what was mapped when the pose is wrong, because a blurred wall marks more cells as known. Each final map is therefore compared with a **reference map** built from the final maps of the episodes with the true pose (`nominal` and `drop30`, 20 episodes): a cell is occupied in the reference if most of those episodes that saw it marked it occupied, and free otherwise. Each of these 20 episodes is compared with a reference built from the other 19. The map is in world coordinates and the scene is static, so the same cell is the same place in every episode.
+The estimated coverage overstates what was mapped when the pose is wrong, because a blurred wall marks more cells as known. Each final map is therefore compared with a **reference map** built from the final maps of the episodes with the true pose: a cell is occupied in the reference if most of those episodes that saw it marked it occupied, and free otherwise. Each true-pose episode is compared with a reference built from the others (leave-one-out). The map is in world coordinates and the scene is static, so the same cell is the same place in every episode.
+
+- **30 episodes:** reference from `nominal`, `drop10` and `drop30`, 90 episodes per map. All 30 episodes of every condition, including the 10 from the first screening, are evaluated against this reference.
+- **First screening:** reference from `nominal` and `drop30`, 20 episodes per map.
 
 | Column | Meaning |
 |---|---|
@@ -197,9 +211,9 @@ The estimated coverage overstates what was mapped when the pose is wrong, becaus
 | `parede_falsa_m2` | False wall: area marked occupied that is free in the reference (m²) |
 | `livre_falso_m2` | False free: area marked free that is occupied in the reference (m²) |
 | `nao_avaliavel` | Fraction of the grid that is known in the episode but was never seen in the reference |
-| `done`, `len_csv`, `col` | Termination reason, episode length in steps (60 steps = 1 s), collisions |
+| `done`, `len_csv` (`len`), `col` | Termination reason, episode length in steps (60 steps = 1 s), collisions |
 
-The grid includes a 0.5 m band outside the fence and the interior of the obstacles, which are never seen; the reference covers 89.8% of the grid on cubes and 95.9% on office.
+The grid includes a 0.5 m band outside the fence and the interior of the obstacles, which are never seen. The reference covers 91.8% of the grid on cubes and 96.7% on office (30 episodes), and 89.8% and 95.9% (first screening).
 
 ## License
 

@@ -1,0 +1,11 @@
+episode,global_eval_step,episode_length_steps,done_reason,obstacle_collision,uav_uav_collision,out_of_world,coverage_frac_final,coverage_frac_best,seed,n_uavs,pose_std_m,yaw_std_deg,lidar_dropout,pose_tau_s,pose_order,checkpoint
+0,4078,4078,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+1,8411,4333,coverage,0,0,0,0.850138247013092,0.850138247013092,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+2,12888,4477,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+3,16688,3800,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+4,21504,4816,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+5,25954,4450,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+6,29951,3997,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+7,34080,4129,coverage,0,0,0,0.8500767946243286,0.8500767946243286,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+8,38043,3963,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
+9,42774,4731,coverage,0,0,0,0.8500153422355652,0.8500153422355652,42,2,0.0,0.0,0.1,0.0,1,logs/skrl/drl_multi_uavs_marl-v3/2026-09-25_00-01-04_ippo_torch_baseline/checkpoints/agent_1000000.pt
